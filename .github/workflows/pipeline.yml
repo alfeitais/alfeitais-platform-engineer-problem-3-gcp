@@ -3,10 +3,6 @@ on:
   pull_request:
     branches: [ main ]
 
-  push:
-    branches: 
-      - '*'
-
 jobs:
   run-cicd:
     runs-on: ubuntu-20.04
