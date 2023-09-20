@@ -35,5 +35,8 @@ jobs:
       - name: Setup Docker Auth
         run: gcloud --quiet auth configure-docker us-central1-docker.pkg.dev
         shell: bash
-      - name: 'Docker build'
-        uses: ./.github/build-image
+      
+      - name: Build Image with Docker
+        run: |-
+          docker build --tag us-central1-docker.pkg.dev/plataforma-3/plataforma-3-repository/javaapi:latest .
+        shell: bash
