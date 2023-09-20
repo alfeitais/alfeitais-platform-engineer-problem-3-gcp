@@ -1,7 +1,8 @@
 name: Challenge-SRE-CICD
 on:
-  pull_request:
-    branches: [ main ]
+  push:
+    branches: 
+      - main
 
 jobs:
   run-cicd:
