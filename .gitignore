@@ -29,3 +29,4 @@ target/*
 plataforma-3-1093c92a4ddf.json
 #ignore terraform files
 .terraform
+keys.json
