@@ -40,3 +40,8 @@ jobs:
         run: |-
           docker build --tag us-central1-docker.pkg.dev/plataforma-3/plataforma-3-repository/javaapi:latest .
         shell: bash
+      - name: Push Image with Docker
+        run: |-
+          docker push us-central1-docker.pkg.dev/plataforma-3/plataforma-3-repository/javaapi:latest
+        shell: bash
+        
