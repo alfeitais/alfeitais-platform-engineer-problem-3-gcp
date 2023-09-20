@@ -24,3 +24,8 @@ replay_pid*
 
 #everything inside target folder
 target/*
+
+#Ignore GCP Key
+plataforma-3-1093c92a4ddf.json
+#ignore terraform files
+.terraform
