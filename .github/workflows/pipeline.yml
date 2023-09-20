@@ -20,16 +20,5 @@ jobs:
           distribution: 'zulu'
 
       - name: Install Dependencies
-        run: mvn clean install
+        run: mvn clean install 
   
-      - name: Build and push the tagged docker image to Artifactory Registry
-        env:
-          IMAGE_TAG: latest
-        run: |
-          docker build -t us-central1-docker.pkg.dev/$ECR_REPOSITORY:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-          run: |-
-            gcloud container images add-tag \
-            us-central1-docker.pkg.dev/plataforma-3/plataforma-3-repository/javaapi:latest \
-            ${{ inputs.gcr-repository }}/
-            
