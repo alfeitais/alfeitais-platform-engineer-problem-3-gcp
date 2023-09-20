@@ -23,3 +23,13 @@ jobs:
       - name: Install Dependencies
         run: mvn clean install 
   
+      - name: Authenticate to Google Cloud
+        id: 'auth'
+        uses: google-github-actions/auth@v0
+        with:
+          credentials_json: '${{ secrets.GKE_SA_KEY }}'
+      - name: Setup Google Cloud CLI
+        uses: google-github-actions/setup-gcloud@v0
+        with:
+          project_id: 'plataforma-3'
+    
