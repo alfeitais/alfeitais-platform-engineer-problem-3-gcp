@@ -32,4 +32,8 @@ jobs:
         uses: google-github-actions/setup-gcloud@v0
         with:
           project_id: 'plataforma-3'
-    
+      - name: Setup Docker Auth
+        run: gcloud --quiet auth configure-docker us-central1-docker.pkg.dev
+        shell: bash
+      - name: 'Docker build'
+        uses: ./.github/build-image
