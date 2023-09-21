@@ -44,4 +44,8 @@ jobs:
         run: |-
           docker push us-central1-docker.pkg.dev/plataforma-3/plataforma-3-repository/javaapi:latest
         shell: bash
+      - name: Deploy Cloud Run
+        run: |- 
+          gcloud run deploy javaapi --image us-central1-docker.pkg.dev/plataforma-3/plataforma-3-repository/javaapi:latest
+          
         
