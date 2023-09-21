@@ -33,6 +33,7 @@ resource "google_compute_firewall" "allow-tcp" {
     protocol = "tcp"
     ports    = ["80", "8080", "1000-2000"]
   }
+  source_ranges = ["0.0.0.0/0"]
 }
 
 output "auto" {
